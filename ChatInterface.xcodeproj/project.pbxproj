@@ -12,6 +12,8 @@
 		34F57E3722787DAF004B184E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F57E3522787DAF004B184E /* Main.storyboard */; };
 		34F57E3922787DB2004B184E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F57E3822787DB2004B184E /* Assets.xcassets */; };
 		34F57E3C22787DB2004B184E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F57E3A22787DB2004B184E /* LaunchScreen.storyboard */; };
+		34F57E4522787E85004B184E /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F57E4322787E85004B184E /* ChatMessageTableViewCell.swift */; };
+		34F57E4622787E85004B184E /* ChatMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F57E4422787E85004B184E /* ChatMessageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		34F57E3822787DB2004B184E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34F57E3B22787DB2004B184E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34F57E3D22787DB2004B184E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34F57E4322787E85004B184E /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
+		34F57E4422787E85004B184E /* ChatMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMessageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				34F57E3822787DB2004B184E /* Assets.xcassets */,
 				34F57E3A22787DB2004B184E /* LaunchScreen.storyboard */,
 				34F57E3D22787DB2004B184E /* Info.plist */,
+				34F57E4322787E85004B184E /* ChatMessageTableViewCell.swift */,
+				34F57E4422787E85004B184E /* ChatMessageTableViewCell.xib */,
 			);
 			path = ChatInterface;
 			sourceTree = "<group>";
@@ -123,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F57E3C22787DB2004B184E /* LaunchScreen.storyboard in Resources */,
+				34F57E4622787E85004B184E /* ChatMessageTableViewCell.xib in Resources */,
 				34F57E3922787DB2004B184E /* Assets.xcassets in Resources */,
 				34F57E3722787DAF004B184E /* Main.storyboard in Resources */,
 			);
@@ -137,6 +144,7 @@
 			files = (
 				34F57E3422787DAF004B184E /* ViewController.swift in Sources */,
 				34F57E3222787DAF004B184E /* AppDelegate.swift in Sources */,
+				34F57E4522787E85004B184E /* ChatMessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8SA62ZA26;
 				INFOPLIST_FILE = ChatInterface/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A8SA62ZA26;
 				INFOPLIST_FILE = ChatInterface/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
