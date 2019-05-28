@@ -26,18 +26,34 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="p7Y-mw-Yiq"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FXA-Uu-rH1">
+                                <rect key="frame" x="20" y="821" width="374" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="hUm-kO-i7D"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <connections>
+                                    <action selector="sendText:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="KsH-St-gKc"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yPC-7E-DBh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="93H-hq-szK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yPC-7E-DBh" secondAttribute="trailing" id="G3T-Tk-u7f"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yPC-7E-DBh" secondAttribute="bottom" constant="49" id="oAc-Fl-ls8"/>
+                            <constraint firstItem="FXA-Uu-rH1" firstAttribute="top" secondItem="yPC-7E-DBh" secondAttribute="bottom" constant="8" id="JQM-3P-yuw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FXA-Uu-rH1" secondAttribute="bottom" id="W3O-Yh-fQB"/>
+                            <constraint firstItem="FXA-Uu-rH1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cd7-zV-MLK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FXA-Uu-rH1" secondAttribute="trailing" constant="20" id="f6W-jP-0xL"/>
                             <constraint firstItem="yPC-7E-DBh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rht-5G-9kV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Z1D-P0-oPN"/>
                     <connections>
+                        <outlet property="newMessageTextField" destination="FXA-Uu-rH1" id="Jh3-5P-Kn7"/>
                         <outlet property="tableView" destination="yPC-7E-DBh" id="dvd-wM-laJ"/>
                     </connections>
                 </viewController>

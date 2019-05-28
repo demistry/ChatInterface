@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var newMessageTextField: UITextField!
     
-    let chatMessages = [ChatMessage(textMessage: "Heyo dawg", isIncoming: true),
+    var chatMessages = [ChatMessage(textMessage: "Heyo dawg", isIncoming: true),
                         ChatMessage(textMessage: "This is a very long message that goes to show how to create chat messages on a chat screen,This is a very long message that goes to show how to create chat messages on a chat screen", isIncoming: true),
                         ChatMessage(textMessage: "Heyo dawg", isIncoming: false),
+                        ChatMessage(textMessage: "This is a very long message that goes to show how to create chat messages on a chat screen,This is a very long message that goes to show how to create chat messages on a chat screen", isIncoming: false),
+                        ChatMessage(textMessage: "Heyo dawg", isIncoming: true),
+                        ChatMessage(textMessage: "This is a very long message that goes to show how to create chat messages on a chat screen,This is a very long message that goes to show how to create chat messages on a chat screen", isIncoming: true),
+                        ChatMessage(textMessage: "This is a very long message that goes to show how to create chat messages on a chat screen,This is a very long message that goes to show how to create chat messages on a chat screen", isIncoming: true),
                         ChatMessage(textMessage: "This is a very long message that goes to show how to create chat messages on a chat screen,This is a very long message that goes to show how to create chat messages on a chat screen", isIncoming: false),
                         ChatMessage(textMessage: "Heyo dawg", isIncoming: true),
                         ChatMessage(textMessage: "This is a very long message that goes to show how to create chat messages on a chat screen,This is a very long message that goes to show how to create chat messages on a chat screen", isIncoming: true),
@@ -25,8 +30,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         navigationItem.title = "Messages"
         navigationController?.navigationBar.prefersLargeTitles = true
+        newMessageTextField.delegate = self
         
-        
+        hideKeyboardWhenTappedAround()
         print(ChatMessageTableViewCell.self)
     }
     
@@ -53,8 +59,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("Text sent")
+        chatMessages.append(ChatMessage(textMessage: textField.text!, isIncoming: false))
+        tableView.reloadData()
+        
+    }
+    
+    @IBAction func sendText(_ sender: UITextField) {
+        
+    }
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 //        return 150
 //    }
+}
+
+extension UIViewController{
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 

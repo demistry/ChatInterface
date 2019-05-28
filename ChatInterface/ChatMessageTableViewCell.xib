@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,43 +12,59 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatMessageTableViewCell" rowHeight="197" id="KGk-i7-Jjw" customClass="ChatMessageTableViewCell" customModule="ChatInterface" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
+            <rect key="frame" x="0.0" y="0.0" width="351" height="197"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="196.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="351" height="196.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GPR-oo-NmC">
-                        <rect key="frame" x="8" y="8" width="266" height="180.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GPR-oo-NmC">
+                        <rect key="frame" x="16" y="8" width="266" height="180.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgK-Tq-5Uw">
+                                <rect key="frame" x="8" y="8" width="250" height="164.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="upx-xm-t2q"/>
+                                </constraints>
+                                <string key="text">This is a very long message that goes to show how to create chat messages on a chat screen,This is a very long message that goes to show how to create chat messages on a chat screen</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" name="findHighlightColor" catalog="System" colorSpace="catalog"/>
-                    </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgK-Tq-5Uw">
-                        <rect key="frame" x="16" y="16" width="250" height="164.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="Dg9-bm-i81"/>
+                            <constraint firstAttribute="trailing" secondItem="fgK-Tq-5Uw" secondAttribute="trailing" constant="8" id="Hqd-IK-29z"/>
+                            <constraint firstItem="fgK-Tq-5Uw" firstAttribute="leading" secondItem="GPR-oo-NmC" secondAttribute="leading" constant="8" id="VVP-NO-S9b"/>
+                            <constraint firstItem="fgK-Tq-5Uw" firstAttribute="top" secondItem="GPR-oo-NmC" secondAttribute="top" constant="8" id="b5O-Xk-7F8"/>
+                            <constraint firstAttribute="bottom" secondItem="fgK-Tq-5Uw" secondAttribute="bottom" constant="8" id="b6Q-FY-bIr"/>
                         </constraints>
-                        <string key="text">This is a very long message that goes to show how to create chat messages on a chat screen,This is a very long message that goes to show how to create chat messages on a chat screen</string>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="07:10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G74-Y8-6Xj">
+                        <rect key="frame" x="290" y="167.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="GPR-oo-NmC" firstAttribute="trailing" secondItem="fgK-Tq-5Uw" secondAttribute="trailing" constant="8" id="2N4-0G-pmK"/>
-                    <constraint firstItem="GPR-oo-NmC" firstAttribute="top" secondItem="fgK-Tq-5Uw" secondAttribute="top" constant="-8" id="5nx-t5-4rS"/>
-                    <constraint firstItem="fgK-Tq-5Uw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="8fF-Ud-c2R"/>
-                    <constraint firstItem="GPR-oo-NmC" firstAttribute="leading" secondItem="fgK-Tq-5Uw" secondAttribute="leading" constant="-8" id="TZT-O1-zI8"/>
-                    <constraint firstItem="GPR-oo-NmC" firstAttribute="bottom" secondItem="fgK-Tq-5Uw" secondAttribute="bottom" constant="8" id="dZ9-kM-lPY"/>
-                    <constraint firstAttribute="bottom" secondItem="fgK-Tq-5Uw" secondAttribute="bottom" constant="16" id="saG-g2-8QE"/>
+                    <constraint firstItem="G74-Y8-6Xj" firstAttribute="bottom" secondItem="GPR-oo-NmC" secondAttribute="bottom" id="2Xc-sW-a3M"/>
+                    <constraint firstItem="GPR-oo-NmC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Gew-6H-0rL"/>
+                    <constraint firstAttribute="bottom" secondItem="GPR-oo-NmC" secondAttribute="bottom" constant="8" id="LyI-tU-JHd"/>
+                    <constraint firstItem="GPR-oo-NmC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" priority="750" constant="16" id="WKn-u1-Kp7"/>
+                    <constraint firstItem="G74-Y8-6Xj" firstAttribute="leading" secondItem="GPR-oo-NmC" secondAttribute="trailing" priority="750" constant="8" id="a6T-TZ-bWm"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="backGToViewLeading" destination="WKn-u1-Kp7" id="1Gu-Iy-EKm"/>
                 <outlet property="chatBackgroundView" destination="GPR-oo-NmC" id="cB9-1p-5KU"/>
                 <outlet property="chatMessageLabel" destination="fgK-Tq-5Uw" id="I2f-ov-wdl"/>
+                <outlet property="chatTimeLabel" destination="G74-Y8-6Xj" id="dfH-JP-bJP"/>
+                <outlet property="timeLeadtoBackGtrail" destination="a6T-TZ-bWm" id="SQP-qa-gCk"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="123.54910714285714"/>
+            <point key="canvasLocation" x="160.1449275362319" y="123.54910714285714"/>
         </tableViewCell>
     </objects>
 </document>

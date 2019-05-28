@@ -14,6 +14,8 @@
 		34F57E3C22787DB2004B184E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F57E3A22787DB2004B184E /* LaunchScreen.storyboard */; };
 		34F57E4522787E85004B184E /* ChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F57E4322787E85004B184E /* ChatMessageTableViewCell.swift */; };
 		34F57E4622787E85004B184E /* ChatMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F57E4422787E85004B184E /* ChatMessageTableViewCell.xib */; };
+		34F66710229D4BAE005A1492 /* TestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F6670E229D4BAE005A1492 /* TestTableViewCell.swift */; };
+		34F66711229D4BAE005A1492 /* TestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34F6670F229D4BAE005A1492 /* TestTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		34F57E3D22787DB2004B184E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34F57E4322787E85004B184E /* ChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		34F57E4422787E85004B184E /* ChatMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatMessageTableViewCell.xib; sourceTree = "<group>"; };
+		34F6670E229D4BAE005A1492 /* TestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewCell.swift; sourceTree = "<group>"; };
+		34F6670F229D4BAE005A1492 /* TestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		34F57E2522787DAF004B184E = {
 			isa = PBXGroup;
 			children = (
+				34F6670E229D4BAE005A1492 /* TestTableViewCell.swift */,
+				34F6670F229D4BAE005A1492 /* TestTableViewCell.xib */,
 				34F57E3022787DAF004B184E /* ChatInterface */,
 				34F57E2F22787DAF004B184E /* Products */,
 			);
@@ -131,6 +137,7 @@
 				34F57E3C22787DB2004B184E /* LaunchScreen.storyboard in Resources */,
 				34F57E4622787E85004B184E /* ChatMessageTableViewCell.xib in Resources */,
 				34F57E3922787DB2004B184E /* Assets.xcassets in Resources */,
+				34F66711229D4BAE005A1492 /* TestTableViewCell.xib in Resources */,
 				34F57E3722787DAF004B184E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34F57E3422787DAF004B184E /* ViewController.swift in Sources */,
+				34F66710229D4BAE005A1492 /* TestTableViewCell.swift in Sources */,
 				34F57E3222787DAF004B184E /* AppDelegate.swift in Sources */,
 				34F57E4522787E85004B184E /* ChatMessageTableViewCell.swift in Sources */,
 			);

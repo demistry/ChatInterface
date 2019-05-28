@@ -10,10 +10,16 @@ import UIKit
 
 class ChatMessageTableViewCell: UITableViewCell {
 
+ 
+    @IBOutlet weak var backGToViewLeading: NSLayoutConstraint!
     @IBOutlet weak var chatMessageLabel: UILabel!
     @IBOutlet weak var chatBackgroundView: UIView!
+    @IBOutlet weak var chatTimeLabel: UILabel!
+    @IBOutlet weak var timeLeadtoBackGtrail: NSLayoutConstraint!
     var labelLeadingConstraint: NSLayoutConstraint!
     var labelTrailingConstraint: NSLayoutConstraint!
+    var timeOutgoingTrailing : NSLayoutConstraint!
+    var chatBackGroundOutgoingTrailing : NSLayoutConstraint!
     
     class var nib : UINib{
         return UINib(nibName: "ChatMessageTableViewCell", bundle: Bundle.main)
@@ -26,11 +32,19 @@ class ChatMessageTableViewCell: UITableViewCell {
             chatMessageLabel.textColor = isIncoming ? .black : .white
             
             if isIncoming{
-                labelLeadingConstraint.isActive = true
-                labelTrailingConstraint.isActive = false
+//
+                timeLeadtoBackGtrail.priority = .defaultHigh
+                backGToViewLeading.priority = .defaultHigh
+                timeOutgoingTrailing.isActive = false
+                chatBackGroundOutgoingTrailing.isActive = false
             } else{
-                labelLeadingConstraint.isActive = false
-                labelTrailingConstraint.isActive = true
+//
+                chatBackGroundOutgoingTrailing.isActive = true
+                timeOutgoingTrailing.isActive = true
+                timeLeadtoBackGtrail.priority = .defaultLow
+                backGToViewLeading.priority = .defaultLow
+              
+                
             }
 
         }
@@ -38,16 +52,17 @@ class ChatMessageTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        labelLeadingConstraint.constant = 16
-//        labelTrailingConstraint.constant = 16
-        labelLeadingConstraint = chatMessageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16)
-        labelTrailingConstraint = chatMessageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+        
+        chatBackGroundOutgoingTrailing = chatBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)
+        timeOutgoingTrailing = chatTimeLabel.trailingAnchor.constraint(equalTo: chatBackgroundView.leadingAnchor, constant: -8)
+        
         chatBackgroundView.layer.cornerRadius = 12
         
         
         
         chatMessageLabel.translatesAutoresizingMaskIntoConstraints = false
-        //chatBackgroundView.translatesAutoresizingMaskIntoConstraints = false
+        chatTimeLabel.translatesAutoresizingMaskIntoConstraints = false
+        chatBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         
     }
     
